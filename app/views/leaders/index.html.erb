@@ -1,0 +1,27 @@
+<h1>Listing leaders</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Notes</th>
+    <th>Civilization</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @leaders.each do |leader| %>
+  <tr>
+    <td><%= leader.name %></td>
+    <td><%= leader.notes %></td>
+    <td><%= leader.civilization_id %></td>
+    <td><%= link_to 'Show', leader %></td>
+    <td><%= link_to 'Edit', edit_leader_path(leader) %></td>
+    <td><%= link_to 'Destroy', leader, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Leader', new_leader_path %>

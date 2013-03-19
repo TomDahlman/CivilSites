@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @leader.name %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @leader.notes %>
+</p>
+
+<p>
+  <b>Civilization:</b>
+  <%= @leader.civilization_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_leader_path(@leader) %> |
+<%= link_to 'Back', leaders_path %>

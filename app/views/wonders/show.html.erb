@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @wonder.name %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @wonder.notes %>
+</p>
+
+
+<%= link_to 'Edit', edit_wonder_path(@wonder) %> |
+<%= link_to 'Back', wonders_path %>
