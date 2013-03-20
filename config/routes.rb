@@ -1,4 +1,6 @@
 CivilSites::Application.routes.draw do
+ 
+  get "password_resets/new"
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
@@ -8,7 +10,7 @@ CivilSites::Application.routes.draw do
 
   resources :users
   resources :sessions
-
+  resources :password_resets
 
   resources :wonders
 
